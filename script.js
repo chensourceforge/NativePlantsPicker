@@ -1645,52 +1645,52 @@ function createPlot(){
 	fieldset = createFieldset("Requirements");
 
 	appendOptionHeading(fieldset, "Light Exposure");
-	appendOption(fieldset, "sun.png", "Sun", true,
+	appendOption(fieldset, "img/sun.png", "Sun", true,
 		addRemoveFilter(backingObj, "light", SUN));
-	appendOption(fieldset, "partial_shade.png", "Partial Shade", true,
+	appendOption(fieldset, "img/partial_shade.png", "Partial Shade", true,
 		addRemoveFilter(backingObj, "light", PARTIAL_SHADE));
-	appendOption(fieldset, "shade.png", "Shade", true,
+	appendOption(fieldset, "img/shade.png", "Shade", true,
 		addRemoveFilter(backingObj, "light", SHADE));
 	
 	appendOptionHeading(fieldset, "Moisture");
-	appendOption(fieldset, "dry.png", "Dry", true,
+	appendOption(fieldset, "img/dry.png", "Dry", true,
 		addRemoveFilter(backingObj, "moisture", DRY));
-	appendOption(fieldset, "moist.png", "Moist", true,
+	appendOption(fieldset, "img/moist.png", "Moist", true,
 		addRemoveFilter(backingObj, "moisture", MOIST));
-	appendOption(fieldset, "wet.png", "Wet", true,
+	appendOption(fieldset, "img/wet.png", "Wet", true,
 		addRemoveFilter(backingObj, "moisture", WET));
 
 	appendOptionHeading(fieldset, "Soil Type");
-	appendOption(fieldset, "clay.png", "Clay", true,
+	appendOption(fieldset, "img/clay.png", "Clay", true,
 		addRemoveFilter(backingObj, "soil", CLAY));
-	appendOption(fieldset, "loam.png", "Loam", true,
+	appendOption(fieldset, "img/loam.png", "Loam", true,
 		addRemoveFilter(backingObj, "soil", LOAM));
-	appendOption(fieldset, "sand.png", "Sand", true,
+	appendOption(fieldset, "img/sand.png", "Sand", true,
 		addRemoveFilter(backingObj, "soil", SAND));
 
 	appendOptionHeading(fieldset, "Wildlife");
-	appendOption(fieldset, "butterflies.png", "Butterflies", true,
+	appendOption(fieldset, "img/butterflies.png", "Butterflies", true,
 		addRemoveFilter(backingObj, "wildlife", BUTTERFLIES));
-	appendOption(fieldset, "birds.png", "Birds", true,
+	appendOption(fieldset, "img/birds.png", "Birds", true,
 		addRemoveFilter(backingObj, "wildlife", BIRDS));
-	appendOption(fieldset, "hummingbirds.png", "Hummingbirds", true,
+	appendOption(fieldset, "img/hummingbirds.png", "Hummingbirds", true,
 		addRemoveFilter(backingObj, "wildlife", HUMMINGBIRDS));
-	appendOption(fieldset, "bees.png", "Bees", true,
+	appendOption(fieldset, "img/bees.png", "Bees", true,
 		addRemoveFilter(backingObj, "wildlife", BEES));
 
 	appendOptionHeight(fieldset, 
 		minHeightChanged(backingObj), maxHeightChanged(backingObj));
 
-	appendOption(fieldset, "salt.png", "Salt Tolerant", false,
+	appendOption(fieldset, "img/salt.png", "Salt Tolerant", false,
 		addRemoveFilterSingle(backingObj, "salt"));
 
-	appendOption(fieldset, "drought.png", "Drought Tolerant", false,
+	appendOption(fieldset, "img/drought.png", "Drought Tolerant", false,
 		addRemoveFilterSingle(backingObj, "drought"));
 
-	appendOption(fieldset, "deciduous.png", "Deciduous Tree", false,
+	appendOption(fieldset, "img/deciduous.png", "Deciduous Tree", false,
 		addRemoveFilterTree(backingObj, true));
 
-	appendOption(fieldset, "coniferous.png", "Coniferous Tree", false,
+	appendOption(fieldset, "img/coniferous.png", "Coniferous Tree", false,
 		addRemoveFilterTree(backingObj, false));
 
 	options.appendChild(fieldset);
@@ -1979,7 +1979,7 @@ function maxHeightChanged(backingObj){
 
 function appendOptionHeight(options, minHeightCallback, maxHeightCallback){
 	var div = document.createElement("div");
-	appendImage(div, "height.png");
+	appendImage(div, "img/height.png");
 	div.appendChild(document.createTextNode("Height: "));
 	var input = document.createElement("input");
 	input.setAttribute("type", "number");
@@ -2074,28 +2074,28 @@ function redrawPlotFromList(backingObj){
 		arr = plant.light; len2 = arr.length;
 		for(j = 0; j < len2; j++){
 			switch(arr[j]){
-				case SUN: appendImage(line3, "sun.png"); break;
-				case PARTIAL_SHADE: appendImage(line3, "partial_shade.png"); break;
-				case SHADE: appendImage(line3, "shade.png"); break;
+				case SUN: appendImage(line3, "img/sun.png"); break;
+				case PARTIAL_SHADE: appendImage(line3, "img/partial_shade.png"); break;
+				case SHADE: appendImage(line3, "img/shade.png"); break;
 			}
 		}
 		arr = plant.moisture; len2 = arr.length;
 		for(j = 0; j < len2; j++){
 			switch(arr[j]){
-				case DRY: appendImage(line3, "dry.png"); break;
-				case MOIST: appendImage(line3, "moist.png"); break;
-				case WET: appendImage(line3, "wet.png"); break;
+				case DRY: appendImage(line3, "img/dry.png"); break;
+				case MOIST: appendImage(line3, "img/moist.png"); break;
+				case WET: appendImage(line3, "img/wet.png"); break;
 			}
 		}
 		arr = plant.soil; len2 = arr.length;
 		for(j = 0; j < len2; j++){
 			switch(arr[j]){
-				case CLAY: appendImage(line3, "clay.png"); break;
-				case LOAM: appendImage(line3, "loam.png"); break;
-				case SAND: appendImage(line3, "sand.png"); break;
+				case CLAY: appendImage(line3, "img/clay.png"); break;
+				case LOAM: appendImage(line3, "img/loam.png"); break;
+				case SAND: appendImage(line3, "img/sand.png"); break;
 			}
 		}
-		appendImage(line3, "height.png");
+		appendImage(line3, "img/height.png");
 		var h0 = plant.height[0], h1 = plant.height[1];
 		if(h0 < h1){
 			if(category == GROUNDCOVER || category == WILDFLOWER)
@@ -2111,18 +2111,18 @@ function redrawPlotFromList(backingObj){
 		arr = plant.colour; len2 = arr.length;
 		for(j = 0; j < len2; j++){
 			switch(arr[j]){
-				case WHITE: appendImage(line3, "white.png"); break;
-				case ORANGE: appendImage(line3, "orange.png"); break;
-				case PURPLE: appendImage(line3, "purple.png"); break;
-				case GREEN: appendImage(line3, "green.png"); break;
-				case YELLOW: appendImage(line3, "yellow.png"); break;
-				case PINK: appendImage(line3, "pink.png"); break;
-				case BLUE: appendImage(line3, "blue.png"); break;
-				case RED: appendImage(line3, "red.png"); break;
+				case WHITE: appendImage(line3, "img/white.png"); break;
+				case ORANGE: appendImage(line3, "img/orange.png"); break;
+				case PURPLE: appendImage(line3, "img/purple.png"); break;
+				case GREEN: appendImage(line3, "img/green.png"); break;
+				case YELLOW: appendImage(line3, "img/yellow.png"); break;
+				case PINK: appendImage(line3, "img/pink.png"); break;
+				case BLUE: appendImage(line3, "img/blue.png"); break;
+				case RED: appendImage(line3, "img/red.png"); break;
 			}
 		}
 		if(plant.months.length > 0){
-			appendImage(line3, "months.png");
+			appendImage(line3, "img/months.png");
 			var m0 = plant.months[0], m1 = plant.months[1];
 			if(m0 < m1){
 				line3.appendChild(document.createTextNode(
@@ -2132,15 +2132,15 @@ function redrawPlotFromList(backingObj){
 				line3.appendChild(document.createTextNode(getMonth(m0)));
 			}
 		}
-		if(plant.salt){ appendImage(line3, "salt.png"); }
-		if(plant.drought){ appendImage(line3, "drought.png"); }
+		if(plant.salt){ appendImage(line3, "img/salt.png"); }
+		if(plant.drought){ appendImage(line3, "img/drought.png"); }
 		arr = plant.wildlife; len2 = arr.length;
 		for(j = 0; j < len2; j++){
 			switch(arr[j]){
-				case BUTTERFLIES: appendImage(line3, "butterflies.png"); break;
-				case BIRDS: appendImage(line3, "birds.png"); break;
-				case HUMMINGBIRDS: appendImage(line3, "hummingbirds.png"); break;
-				case BEES: appendImage(line3, "bees.png"); break;
+				case BUTTERFLIES: appendImage(line3, "img/butterflies.png"); break;
+				case BIRDS: appendImage(line3, "img/birds.png"); break;
+				case HUMMINGBIRDS: appendImage(line3, "img/hummingbirds.png"); break;
+				case BEES: appendImage(line3, "img/bees.png"); break;
 			}
 		}
 		switch(category){
@@ -2157,8 +2157,8 @@ function redrawPlotFromList(backingObj){
 				else { elem.className = "plant shrubs"; }
 				break;
 			case TREE:
-				if(plant.deciduous){ appendImage(line3, "deciduous.png"); }
-				else { appendImage(line3, "coniferous.png"); }
+				if(plant.deciduous){ appendImage(line3, "img/deciduous.png"); }
+				else { appendImage(line3, "img/coniferous.png"); }
 				if(obj.ignore){ elem.className = "ignore plant trees"; }
 				else { elem.className = "plant trees"; }
 				break;

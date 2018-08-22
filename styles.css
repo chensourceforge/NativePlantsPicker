@@ -27,35 +27,35 @@
 	background-position: bottom;
 }
 .nocolor {
-	background-image: url("white.png");
+	background-image: url("img/white.png");
 	opacity: 0.4;
 }
 .white, .orange, .purple, .green, .yellow, .pink, .blue, .red {
 	color: red;
 }
 .white {
-	background-image: url("white.png");
+	background-image: url("img/white.png");
 }
 .orange {
-	background-image: url("orange.png");
+	background-image: url("img/orange.png");
 }
 .purple {
-	background-image: url("purple.png");
+	background-image: url("img/purple.png");
 }
 .green {
-	background-image: url("green.png");
+	background-image: url("img/green.png");
 }
 .yellow {
-	background-image: url("yellow.png");
+	background-image: url("img/yellow.png");
 }
 .pink {
-	background-image: url("pink.png");
+	background-image: url("img/pink.png");
 }
 .blue {
-	background-image: url("blue.png");
+	background-image: url("img/blue.png");
 }
 .red {
-	background-image: url("red.png");
+	background-image: url("img/red.png");
 }
 #workspace {
 	font-family: "Times New Roman", Times, serif;
